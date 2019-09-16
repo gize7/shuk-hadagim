@@ -1,0 +1,30 @@
+
+.navbar{
+    background-color: transparent;
+    padding: 20px 10%;
+    border-bottom: 2px solid rgba(255,255,255,.15);
+    position: relative;
+    display: flex;
+    align-items: center;
+    ul{
+        list-style-type: none;
+        padding: 27px 17px 10px 17px;
+        margin: 0;
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    li{
+        display: inline-block;
+    }
+    a{
+        padding: 10px 15px;
+        text-decoration: none;
+        color:white;
+        display: block;
+        border-bottom: 2px solid transparent;
+        &:hover{
+            border-color: #ed4848;
+        }
+    }
+}

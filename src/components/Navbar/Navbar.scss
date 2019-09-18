@@ -8,7 +8,7 @@
     align-items: center;
     ul{
         list-style-type: none;
-        padding: 27px 17px 10px 17px;
+        padding: 27px 17px 10px 0;
         margin: 0;
         display: flex;
         width: 100%;
@@ -17,14 +17,22 @@
     li{
         display: inline-block;
     }
+    a::after{
+        display:block;
+        content: '';
+        border-bottom: 2px solid #ed4848;  
+        transform: scaleX(0);  
+        transition: transform 250ms ease-in-out;
+    }
     a{
         padding: 10px 15px;
         text-decoration: none;
         color:white;
         display: block;
-        border-bottom: 2px solid transparent;
-        &:hover{
-            border-color: #ed4848;
+        transition: border 0.3s;
+        
+        &:hover::after{
+            transform: scaleX(1);
         }
     }
 }

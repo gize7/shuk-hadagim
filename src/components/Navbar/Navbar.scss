@@ -6,6 +6,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    box-sizing: border-box;
     ul{
         list-style-type: none;
         padding: 27px 17px 10px 0;
@@ -13,9 +14,6 @@
         display: flex;
         width: 100%;
         justify-content: flex-end;
-    }
-    li{
-        display: inline-block;
     }
     a::after{
         display:block;
@@ -34,5 +32,34 @@
         &:hover::after{
             transform: scaleX(1);
         }
+    }
+}
+.hamburger{
+    padding: 10px 10px;
+    font-size: 2rem;
+    color: #fff;
+    border-bottom: 2px solid rgba(255,255,255,.15);
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger{
+        display: block;
+    }
+    .navbar{
+        text-align: center;
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top:-100%;
+        transition: all 0.3s;
+        ul{
+            display: block;   
+            padding: 0;   
+        }
+    }
+    .navbar.show{
+        top:50px;
     }
 }
